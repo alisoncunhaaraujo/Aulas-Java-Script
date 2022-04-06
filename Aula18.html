@@ -1,0 +1,33 @@
+<meta charset="UTF-8">
+<script>
+      
+      function pulaLinha() {        
+            
+            document.write("<br><br>");
+
+      }
+
+      function mostra(frase){
+            
+            document.write(frase);
+            pulaLinha();
+      }
+      
+    
+    var anoCopa = 1930;
+    var quantidadeCopas = 0;
+    var limite = parseInt(prompt("Entre com o ano e saberá quantas copas teve até o número digitado"));
+    while (anoCopa <= limite){
+      
+        
+        anoCopa = anoCopa + 4;
+        quantidadeCopas = quantidadeCopas + 1;
+             
+
+    }
+        mostra("A quantidade de copas de 1930 até " + limite + " é de " + quantidadeCopas + " copas");
+
+
+
+
+</script>
