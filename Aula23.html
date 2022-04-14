@@ -5,18 +5,27 @@
 
 
 <script>
-     var segredo = 5;
+     
+     var segredo = Math.round(Math.random() * 10);
+     
      var input = document.querySelector("input");
-     function verifica(){
+     input.focus();
+     
+     function verifica() {
+        
         if(input.value == segredo){
-         alert ("Voce acertou");
-     }else {
+         
+            alert ("Voce acertou");
+        
+        }else {
 
-         alert ("Voce errou");
-     }
-
-     }
+            alert ("Voce errou");
+        }
+        
+        input.value = "";
+        input.focus();
+}
      var button = document.querySelector("button");
      button.onclick = verifica;
 
-</script)
+</script>
