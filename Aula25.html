@@ -6,14 +6,47 @@
 
 <script>
      
-     var segredos = [];
-     segredos.push(Math.round(Math.random() * 10));
-     segredos.push(Math.round(Math.random() * 10));
-     segredos.push(Math.round(Math.random() * 10));
-     segredos.push(Math.round(Math.random() * 10));
-     segredos.push(Math.round(Math.random() * 10));
+    function sorteia (){
 
-     console.log(segredos);
+          return Math.round(Math.random() * 10 );
+    }
+
+    function sorteiaNumeros(quantidade){
+
+    var segredos = [];
+
+    var numero = 1;
+    
+    while (numero <= quantidade){
+
+        var numeroAleatorio = sorteia();
+        
+        if (numeroAleatorio !== 0 ){
+        var achou = false;
+        
+        for (var posicao = 0; posicao < segredos.length; posicao++){
+
+            if (segredos [posicao] == numeroAleatorio){
+                achou = true;
+                break;
+            }
+        }
+        
+        if (achou == false) {
+            segredos.push(numeroAleatorio);
+            numero++;
+
+        } 
+
+    }
+      
+}
+    
+     return segredos;
+    
+    }
+
+     var segredos = sorteiaNumeros(4);
      
      var input = document.querySelector("input");
      input.focus();
